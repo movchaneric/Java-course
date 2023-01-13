@@ -1,5 +1,7 @@
 package sample;
 
+import com.sun.org.apache.xpath.internal.operations.String;
+
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -27,5 +29,16 @@ public class CardGenerator {
         }
     }
 
+    public ArrayList<String> getCards(int size){
+        ArrayList<String> duplicatedCardsList = new ArrayList<>();
+        //Check maximum size
+        if(size > 6 && size*size % 2 != 0){
+            System.out.println("Maximum matrix size is 6 and has to even");
+            System.exit(1);
+        }
+
+        int matSize = size * size;
+
+    }
 
 }
